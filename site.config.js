@@ -1,7 +1,7 @@
 const CONFIG = {
   // profile setting (required)
   profile: {
-    name: "name_first_line",
+    name: "notionToBlog",
     image: "/avatar.png",
     role: "fullstack software engineer",
     bio: "I am on a perpetual journey back to entrepreneurship",
