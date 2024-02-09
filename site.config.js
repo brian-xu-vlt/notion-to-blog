@@ -1,10 +1,13 @@
 const CONFIG = {
   // profile setting (required)
   profile: {
-    name: "notionToBlog",
-    image: "/avatar.png",
-    role: "fullstack software engineer",
-    bio: "I am on a perpetual journey back to entrepreneurship",
+    name: "Brian Valette",
+    image: "/avatar.svg",
+    roles: [
+      " Fullstack software engineer ",
+      " Coffee and Tea (ex)-snob ",
+    ],
+    bio: "This is Brian Report:\nmy entrepreneurial reporting to you, who made me accountable.",
     email: "brian.valette@gmail.com",
     linkedin: "brian-valette",
     github: "brian-xu-vlt",
@@ -12,13 +15,14 @@ const CONFIG = {
   },
   projects: [
     {
-      name: `morethan-log`,
-      href: "https://github.com/brian-xu-vlt/notion-to-blog",
+      name: `Make me accountable, right now!`,
+      href: "https://app.lyf.eu/pot/6fa92684-d7e0-4fff-adbe-bbb71951a0f6?lang=en",
+
     },
   ],
   // blog setting (required)
   blog: {
-    title: "Brian",
+    title: "Brian Report",
     description: "I am still entrepreneuring.",
   },
 

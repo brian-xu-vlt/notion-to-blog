@@ -10,7 +10,7 @@ type Props = {
 const MobileProfileCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      <div className="top">💻 Profile</div>
+      {/* <div className="top">💻 Profile</div> */}
       <div className="mid">
         <div className="wrapper">
           <Image
@@ -22,7 +22,11 @@ const MobileProfileCard: React.FC<Props> = () => {
           />
           <div className="wrapper">
             <div className="top">{CONFIG.profile.name}</div>
-            <div className="mid">{CONFIG.profile.role}</div>
+            {CONFIG.profile.roles.map((role) => (
+              <div className="mid" key={role}>
+                {role}
+              </div>
+            ))}
             <div className="btm">{CONFIG.profile.bio}</div>
           </div>
         </div>
@@ -69,6 +73,7 @@ const StyledWrapper = styled.div`
           color: ${({ theme }) => theme.colors.gray11};
         }
         > .btm {
+          text-align: justify;
           font-size: 0.875rem;
           line-height: 1.25rem;
         }
