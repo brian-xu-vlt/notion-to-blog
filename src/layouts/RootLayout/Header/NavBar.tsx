@@ -4,7 +4,7 @@ import Link from "next/link"
 const NavBar: React.FC = () => {
   return (
     <StyledWrapper className="">
-      <Link href="/">Push Me !!!</Link>
+      <Link href="/mdw-book-intro">Push Me !!!</Link>
     </StyledWrapper>
   )
 }
