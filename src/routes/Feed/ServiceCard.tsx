@@ -1,9 +1,8 @@
 import { CONFIG } from "site.config"
 import React from "react"
-import { AiFillCodeSandboxCircle } from "react-icons/ai"
+import { TbFocus2 } from "react-icons/tb"
 import styled from "@emotion/styled"
 import { Emoji } from "src/components/Emoji"
-import { css, keyframes } from "@emotion/react"
 
 const ServiceCard: React.FC = () => {
   if (!CONFIG.projects) return null
@@ -20,7 +19,7 @@ const ServiceCard: React.FC = () => {
             rel="noreferrer"
             target="_blank"
           >
-            <AiFillCodeSandboxCircle className="icon" />
+            <TbFocus2 className="icon" />
             <div className="name">{CONFIG.projects[0].name}</div>
           </a>
         ))}
@@ -35,39 +34,6 @@ const StyledTitle = styled.div`
   padding: 0.25rem;
   margin-bottom: 0.75rem;
 `
-
-// const StyledWrapper = styled.div`
-//   display: flex;
-//   padding: 0.25rem;
-//   margin-bottom: 2.25rem;
-//   flex-direction: column;
-//   border-radius: 1rem;
-//   background-color: ${({ theme }) =>
-//     theme.scheme === "light" ? "white" : theme.colors.gray4};
-//   > a {
-//     display: flex;
-//     padding: 0.75rem;
-//     gap: 0.75rem;
-//     align-items: center;
-//     border-radius: 1rem;
-//     color: ${({ theme }) => theme.colors.gray11};
-//     cursor: pointer;
-
-//     :hover {
-//       color: ${({ theme }) => theme.colors.gray12};
-//       background-color: ${({ theme }) => theme.colors.gray5};
-//     }
-//     .icon {
-//       font-size: 1.5rem;
-//       line-height: 2rem;
-//     }
-//     .name {
-//       font-size: 0.875rem;
-//       line-height: 1.25rem;
-//     }
-//   }
-// `
-
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -92,17 +58,17 @@ const StyledWrapper = styled.div`
       theme.scheme === "light" ? "white" : theme.colors.gray4};
     background-repeat: no-repeat;
     background-position: 0 0;
+    filter: blur(80px);
     background-image: conic-gradient(
       transparent,
-      rgb(255, 66, 32),
-      rgb(185, 75, 56),
-      rgb(213, 32, 0),
-      rgb(185, 75, 56),
       #ff2600,
+      #ff2600,
+      #3300ff,
       #b94b38,
-      transparent 80%
+      #b94b38,
+      transparent 70%
     );
-    animation: rotate 4s linear infinite;
+    animation: rotate 6s linear infinite;
   }
 
   &::after {
@@ -124,12 +90,13 @@ const StyledWrapper = styled.div`
     gap: 0.75rem;
     align-items: center;
     border-radius: 1rem;
-    color: ${({ theme }) => theme.colors.gray11}; // Adjust color as needed
+    font-weight: 700;
+    color: ${({ theme }) => theme.colors.green12}; // Adjust color as needed
     cursor: pointer;
 
     :hover {
       color: ${({ theme }) =>
-        theme.colors.gray12}; // Adjust hover color as needed
+        theme.scheme === "light" ? "white" : theme.colors.gray12};
       background-color: ${({ theme }) =>
         theme.scheme === "light" ? "#f23d1d" : theme.colors.blue10};
     }
@@ -140,7 +107,7 @@ const StyledWrapper = styled.div`
     }
 
     .name {
-      font-size: 0.875rem;
+      font-size: 1.4rem;
       line-height: 1.25rem;
     }
   }
@@ -151,7 +118,6 @@ const StyledWrapper = styled.div`
     }
   }
 
-  // Include the opacityChange animation if you plan to apply it to a specific element
   @keyframes opacityChange {
     50% {
       opacity: 0.5;

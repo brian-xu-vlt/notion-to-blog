@@ -4,8 +4,8 @@ const CONFIG = {
     name: "Brian Valette",
     image: "/avatar.svg",
     roles: [
-      " Fullstack software engineer ",
-      " Coffee and Tea (ex)-snob ",
+      "Fullstack software engineer",
+      "Coffee and Tea snob retired",
     ],
     bio: "This is Brian Report:\nmy entrepreneurial reporting to you, who made me accountable.",
     email: "brian.valette@gmail.com",

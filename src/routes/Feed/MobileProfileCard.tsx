@@ -10,7 +10,6 @@ type Props = {
 const MobileProfileCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      {/* <div className="top">💻 Profile</div> */}
       <div className="mid">
         <div className="wrapper">
           <Image
@@ -22,14 +21,18 @@ const MobileProfileCard: React.FC<Props> = () => {
           />
           <div className="wrapper">
             <div className="top">{CONFIG.profile.name}</div>
-            {CONFIG.profile.roles.map((role) => (
-              <div className="mid" key={role}>
-                {role}
-              </div>
-            ))}
-            <div className="btm">{CONFIG.profile.bio}</div>
+            <div className="roles">
+              {CONFIG.profile.roles.map((role) => (
+                <div className="mid" key={role}>
+                  {role}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      </div>
+      <div className="mid bio">
+        <div className="text-sm mb-2 bio ">{CONFIG.profile.bio}</div>
       </div>
     </StyledWrapper>
   )
@@ -38,10 +41,26 @@ const MobileProfileCard: React.FC<Props> = () => {
 export default MobileProfileCard
 
 const StyledWrapper = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  .bio {
+    color: ${({ theme }) => theme.colors.gray12};
+    padding: 1rem;
+    line-height: 1.25rem;
+  }
 
   @media (min-width: 1024px) {
     display: none;
+  }
+
+  .roles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: ${({ theme }) => theme.colors.gray11};
   }
 
   > .top {
@@ -49,21 +68,23 @@ const StyledWrapper = styled.div`
     margin-bottom: 0.75rem;
   }
   > .mid {
-    padding: 0.5rem;
+    padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
     background-color: ${({ theme }) =>
       theme.scheme === "light" ? "white" : theme.colors.gray4};
     > .wrapper {
       display: flex;
-      gap: 0.5rem;
+      gap: 1em;
       align-items: center;
       > .wrapper {
+        display: flex;
+        flex-direction: column;
         height: fit-content;
+        gap: 1rem;
         > .top {
           font-size: 1.25rem;
           line-height: 1.75rem;
-          font-style: italic;
           font-weight: 700;
         }
         > .mid {

@@ -9,7 +9,6 @@ type Props = {}
 const ProfileCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
-      <div className="title">{/* <Emoji>💻</Emoji> Profile */}</div>
       <div className="content">
         <div className="top">
           <Image src={CONFIG.profile.image} fill alt="" />
@@ -35,6 +34,9 @@ const ProfileCard: React.FC<Props> = () => {
 export default ProfileCard
 
 const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
   > .title {
     padding: 0.25rem;
     margin-bottom: 0.75rem;
@@ -83,7 +85,8 @@ const StyledWrapper = styled.div`
         color: ${({ theme }) => theme.colors.gray11};
       }
       .bio {
-        text-align: start;
+        color: ${({ theme }) => theme.colors.gray12};
+        text-align: center;
         margin-bottom: 0.5rem;
         font-size: 0.875rem;
         line-height: 1.25rem;

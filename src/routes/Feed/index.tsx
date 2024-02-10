@@ -21,19 +21,21 @@ const Feed: React.FC<Props> = () => {
   return (
     <StyledWrapper>
       <div
-        className="lt"
+        className="rt"
         css={{
           height: `calc(100vh - ${HEADER_HEIGHT}px)`,
         }}
       >
-        <TagList />
+        <ProfileCard />
+        <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
+        <ContactCard />
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
       <div className="mid">
         <MobileProfileCard />
-        <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
-        <div className="tags">
-          <TagList />
-        </div>
+        <ServiceCard />
         <FeedHeader />
         <PostList q={q} />
         <div className="footer">
@@ -41,17 +43,12 @@ const Feed: React.FC<Props> = () => {
         </div>
       </div>
       <div
-        className="rt"
+        className="lt"
         css={{
           height: `calc(100vh - ${HEADER_HEIGHT}px)`,
         }}
       >
-        <ProfileCard />
-        <ServiceCard />
-        <ContactCard />
-        <div className="footer">
-          <Footer />
-        </div>
+        <TagList />
       </div>
     </StyledWrapper>
   )
