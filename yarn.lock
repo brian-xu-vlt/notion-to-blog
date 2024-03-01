@@ -719,6 +719,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vercel/analytics@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "@vercel/analytics@npm:1.2.2"
+  dependencies:
+    server-only: "npm:^0.0.1"
+  peerDependencies:
+    next: ">= 13"
+    react: ^18 || ^19
+  peerDependenciesMeta:
+    next:
+      optional: true
+    react:
+      optional: true
+  checksum: 10c0/82c89846356b370574414aa511d5a341535dcc7ba3b0a5eabfc7644df6d52a7b30253247627382faf4a0cc4192715cea718fe91027f7ba35efba80256064a005
+  languageName: node
+  linkType: hard
+
 "@xobotyi/scrollbar-width@npm:^1.9.5":
   version: 1.9.5
   resolution: "@xobotyi/scrollbar-width@npm:1.9.5"
@@ -1032,6 +1049,7 @@ __metadata:
     "@types/node": "npm:^18.11.15"
     "@types/react": "npm:^18.0.26"
     "@types/react-dom": "npm:^18.0.9"
+    "@vercel/analytics": "npm:^1.2.2"
     autoprefixer: "npm:^10.4.0"
     axios: "npm:>=0.21.1"
     cookies-next: "npm:^2.1.2"
@@ -4717,6 +4735,13 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 10c0/cffd30102de68a9f8cac9ef57b43c2173dc999da4fc5189872b421f9c9e2660f70243b8e964781ac6dc48ba2542647bb672beeb4d756c89c4a9e05e1144fa40a
+  languageName: node
+  linkType: hard
+
+"server-only@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "server-only@npm:0.0.1"
+  checksum: 10c0/4704f0ef85da0be981af6d4ed8e739d39bcfd265b9c246a684060acda5642d0fdc6daffc2308e71e2682c5f508090978802eae0a77623c9b90a49f9ae68048d6
   languageName: node
   linkType: hard
 
